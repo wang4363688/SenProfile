@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="驾驶分析"
+	    android:id="@+id/analyze"
+	    android:textSize="60px"
+	    android:textColor="#C4450E"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentTop="true"
+	    />
+
+<LinearLayout 
+    android:layout_below="@id/analyze"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="50px"
+        />
+    
+    <TableLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="100px"
+                android:text="左转"/>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="150px"
+                android:text="jflsdjfldsjf"
+                android:id="@+id/t2"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="100px"
+                android:text="右转"/>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="150px"
+                android:text="jflsdjfldsjf"
+                android:id="@+id/t3"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="100px"
+                android:text="向左变道"/>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="150px"
+                android:text="jflsdjfldsjf"
+                android:id="@+id/t4"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="100px"
+                android:text="向右变道"/>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="150px"
+                android:text="jflsdjfldsjf"
+                android:id="@+id/t5"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="100px"
+                android:text="掉头"/>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="150px"
+                android:text="jflsdjfldsjf"
+                android:id="@+id/t6"/>
+        </TableRow>
+        <TableRow>
+        	<TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="100px"
+                android:text="刹车"/>
+            <TextView
+                android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:paddingLeft="150px"
+                android:text="jflsdjfldsjf"
+                android:id="@+id/t7"/>
+        </TableRow>
+                        
+    </TableLayout>
+
+
+</LinearLayout>
+    <Button 
+        android:id="@+id/exit"
+        android:text="退出"
+		android:textColor="#FFFFFF"
+		android:textSize="30sp"
+		android:layout_gravity="center_horizontal"
+		android:layout_width="350dp"
+		android:layout_height="40dp"
+		android:background="@drawable/angry_btn"
+		android:shadowColor="#A8A8A8"
+		android:shadowDx="0"
+		android:shadowDy="0"
+		android:shadowRadius="5" 
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+    />	
+
+</RelativeLayout>

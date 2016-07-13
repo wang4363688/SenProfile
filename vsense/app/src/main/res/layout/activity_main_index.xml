@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+
+
+<EditText 
+	android:layout_width="wrap_content" 
+	android:width="600px"
+	android:layout_height="wrap_content" 
+	android:password="true"
+	android:id="@+id/et2"
+	android:background="@android:drawable/edit_text"
+	android:layout_centerInParent="true"
+	android:hint="密码："
+	/>
+
+<TextView 
+    android:id="@+id/space2"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:textSize="20px"
+    android:layout_below="@id/et2"
+    android:layout_centerHorizontal="true"
+    />
+
+<Button 
+	android:id="@+id/login" 
+	android:text="登   录"
+    android:layout_below="@id/space2"
+    android:layout_centerHorizontal="true"
+    
+  	android:textColor="#FFFFFF"
+	android:textSize="30sp"
+
+	android:layout_width="160dp"
+	android:layout_height="40dp"
+	android:background="@drawable/buttonshape"
+	android:shadowColor="#54A8A5"
+	android:shadowDx="3"
+	android:shadowDy="4"
+	android:shadowRadius="5" 
+	/>	
+
+<EditText 
+	android:layout_width="wrap_content" 
+	android:width="600px"
+	android:layout_height="wrap_content" 
+	android:id="@+id/et1"
+	android:background="@android:drawable/edit_text"
+	android:layout_above="@id/et2"
+	android:layout_alignLeft="@id/et2"
+	android:hint="用户名："
+	android:selectAllOnFocus="true"
+	/>
+	
+<TextView 
+	android:id="@+id/space1"    
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="30px"
+    android:layout_above="@id/et1"
+    android:layout_centerHorizontal="true"
+    />
+
+<ImageView 
+    android:id="@+id/iv"
+    android:src="@drawable/face"
+    android:layout_height="200px"
+    android:layout_width="200px"
+	android:scaleType="fitCenter"
+    android:layout_above="@id/space1"
+    android:layout_centerHorizontal="true"
+    />
+
+<TextView
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/register"
+	android:text="注册账号"   
+	android:textSize="40px"
+	android:textColor="#4f9cf2"
+	android:layout_alignParentBottom="true"
+	android:layout_alignParentRight="true"
+    />
+
+<TextView
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/find"
+	android:text="找回密码"   
+	android:textSize="40px"
+	android:textColor="#4f9cf2"
+	android:layout_alignParentBottom="true"
+	android:layout_alignParentLeft="true"
+    />
+
+<TextView 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:id="@+id/jump"
+	android:text="不登录，游客模式"   
+	android:textStyle="italic"
+	android:textSize="35px"
+	android:layout_below="@id/login"
+	android:layout_alignRight="@id/et2"
+	android:textColor="#4f9cf2"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+
+    <Button 
+        android:id="@+id/make_end"
+        android:text="旅途结束"
+		android:textColor="#FFFFFF"
+		android:textSize="30sp"
+		android:layout_gravity="center_horizontal"
+		android:layout_width="350dp"
+		android:layout_height="40dp"
+		android:background="@drawable/angry_btn"
+		android:shadowColor="#A8A8A8"
+		android:shadowDx="0"
+		android:shadowDy="0"
+		android:shadowRadius="5" 
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+    />	
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_above="@id/make_end"
+    >
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="驾驶事件"
+	    android:textSize="50px"
+	    android:textColor="#C4450E"
+	    />
+    
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:textSize="80px" 
+        />
+
+	<ImageView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:scaleType="fitXY"
+	    android:id="@+id/image"
+	    android:layout_gravity="center_horizontal"
+	    />
+
+
+</LinearLayout>
+</RelativeLayout>
