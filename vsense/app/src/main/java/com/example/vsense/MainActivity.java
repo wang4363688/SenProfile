@@ -309,7 +309,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 						ALL_OF_BUMP++;
 						BAD_TURN += BAD_TURN_1;
-
+/*
 						if (angle_calculate(vs, begin, end) < -60 && angle_calculate(vs, begin, end) > -135) {
 							//Toast.makeText(MainActivity.this, "Turn Right", Toast.LENGTH_SHORT).show();
 							tv.setText("Turn Right");
@@ -323,6 +323,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 							//turnLeftTimes++;
 							writeSDcard(message + "\t" + "Turn Left" + "\t" + v1 + "\t" + moveAverage.getValue() + "\t" + angle_calculate(vs, begin, end) + "\n");
 						}//此时判定检测到的凸点为有效凸点，进入等待凸点状态
+*/
 						max1 = max;
 						state = Waiting_for_Bump;
 						max = 0;
@@ -335,11 +336,11 @@ public class MainActivity extends Activity implements SensorEventListener {
 					}
 
 				} else if (state == Waiting_for_Bump) {              //如果此时进入了等待凸点状态
-					if (Math.abs(v) <= s) {
+					if (Math.abs(v) <= s&&start_of_2nd_bump == 0) {
 						T_dwell = T_dwell + (float) 0.05;                //计算上一个凸点第二个s值与下一个凸点第一个s值之间的时间
 					}
 
-					//如果两个s之间时间间隔超过3秒 则不会打出finished
+					//如果两个s之间时间间隔超过2秒 则不会打出finished
 					if (T_dwell < T_NEXT_DELAY && Math.abs(v) > s) {   //如果两个凸点之间的时间间隔小于陀螺仪读数的最大停留时间，且陀螺仪读数大于s，进入第二个凸点状态
 
 						T_BUMP2 = T_BUMP2 + (float) 0.05;            //第二个凸点的停留时间
@@ -361,15 +362,15 @@ public class MainActivity extends Activity implements SensorEventListener {
 							ALL_OF_BUMP++;
 							BAD_TURN += BAD_TURN_2;
 
-							if (Math.abs(getdistance(speeds, vs, begin, end2)) <= 4 && (max * max1 < 0) && Math.abs(getdistance(speeds, vs, begin, end2)) > 1.5) {    //&&(max*max1<0)
+							if (/*Math.abs(getdistance(speeds, vs, begin, end2)) <= 4 && */(max * max1 < 0)/* && Math.abs(getdistance(speeds, vs, begin, end2)) > 1.5*/) {    //&&(max*max1<0)
 								//Toast.makeText(MainActivity.this, "Lane Change", Toast.LENGTH_SHORT).show();
-								if (max < 0) {
+								if (max > 0) {
 									tv.setText("Change to a Right Lane");
 									iv.setImageResource(images[5]);
 									ltorTimes++;
 									writeSDcard(message + "\t" + "Right Lane Change" + "\t" + angle_calculate(vs, begin, end2) + "\t" +
 											getdistance(speeds, vs, begin, end2) + "\n");
-								} else if (max > 0 && Math.abs(getdistance(speeds, vs, begin, end2)) > 1.5) {
+								} else if (max < 0 ) {
 									tv.setText("Change to a Left Lane");
 									iv.setImageResource(images[4]);
 									getdistance(speeds, vs, begin, end2);
@@ -377,13 +378,16 @@ public class MainActivity extends Activity implements SensorEventListener {
 									writeSDcard(message + "\t" + "Change to a Left Lane" + "\t" + angle_calculate(vs, begin, end2) + "\t" +
 											getdistance(speeds, vs, begin, end2) + "\n");
 								}
-							} else if ((max * max1 < 0) && Math.abs(getdistance(speeds, vs, begin, end2)) > 4) {
+							}
+							/*
+							else if ((max * max1 < 0) && Math.abs(getdistance(speeds, vs, begin, end2)) > 4) {
 								//Toast.makeText(MainActivity. this, "Curvy Road",Toast.LENGTH_SHORT).show();
 								tv.setText("Curvy Road");
 								curvyRoadTimes++;
 								writeSDcard(message + "\t" + "Curvy Road" + "\t" + angle_calculate(vs, begin, end2) + "\t" +
 										getdistance(speeds, vs, begin, end2) + "\n");
 							}
+							*/
 							//两个反向凸点区分变道、在弯曲的道路上
 							else if (max * max1 > 0) {
 								if (angle_calculate(vs, begin, end2) <= -60 && angle_calculate(vs, begin, end2) >= -135) {
@@ -450,7 +454,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 						BAD_TURN_1 = 0;
 						BAD_TURN_2 = 0;
 
-					} else if (T_dwell > T_NEXT_DELAY) {
+					} else if (T_dwell >= T_NEXT_DELAY) {
 						end2 = start;
 
 						//此时判定为只有一个凸点
