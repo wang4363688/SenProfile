@@ -29,31 +29,7 @@
             android:label="@string/app_name" >
            
         </activity>
-        
-        <activity android:name="com.example.vsense.Index">
-             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>       
-        
-        <activity android:name="com.example.vsense.Register">
-             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
-        <activity android:name="com.example.vsense.Find">
-             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
         <activity android:name="com.example.vsense.StartActivity">
              <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

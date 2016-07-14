@@ -13,7 +13,7 @@ public class Welcome extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_welcome);
-        final Intent it = new Intent(Welcome.this, Index.class); //ÄãÒª×ªÏòµÄActivity   
+        final Intent it = new Intent(Welcome.this, StartActivity.class); //ï¿½ï¿½Òª×ªï¿½ï¿½ï¿½Activity
 
         Timer timer = new Timer(); 
 
@@ -23,7 +23,7 @@ public class Welcome extends Activity {
 
             public void run() {   
 
-            	startActivity(it); //Ö´ÐÐ  
+            	startActivity(it); //Ö´ï¿½ï¿½  
             	finish();
             } 
 
