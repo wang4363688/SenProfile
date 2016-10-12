@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:background="#ffffff">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:orientation="horizontal"
+		android:background="#000000"
+		>
+
+		<ImageButton
+			android:id="@+id/back1"
+			android:scaleType="fitXY"
+			android:layout_marginLeft="10dp"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:layout_gravity="center"
+			android:background="@drawable/back"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="自定义模式"
+			android:layout_gravity="center"
+			android:layout_centerHorizontal="true"
+			android:textSize="22sp"
+			android:textColor="#ffffff"/>
+	</LinearLayout>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+		android:layout_marginTop="20dp"
+        android:src="@drawable/car_start"
+        />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="30dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:orientation="vertical">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center"
+			>
+			<TextView
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:textColor="#000000"
+				android:textSize="20dp"
+				android:text="刹车加速度最小阈值：" />
+			<EditText
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:inputType="numberDecimal"
+				android:maxLength="3"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/brake_min"
+				android:text="1" />
+			<ImageButton
+				android:id="@+id/wenhao1"
+				android:scaleType="fitXY"
+				android:layout_marginLeft="15dp"
+				android:layout_gravity="center_vertical"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:background="@drawable/wenhao"
+				/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:orientation="horizontal"
+			android:gravity="center_horizontal"
+			>
+			<TextView
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:textColor="#000000"
+				android:textSize="20dp"
+				android:text="刹车加速度最大阈值：" />
+			<EditText
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:inputType="numberDecimal"
+				android:maxLength="3"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/brake_max"
+				android:text="2" />
+			<ImageButton
+				android:id="@+id/wenhao2"
+				android:scaleType="fitXY"
+				android:layout_marginLeft="15dp"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+				android:background="@drawable/wenhao"
+				/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:orientation="horizontal"
+			android:gravity="center_horizontal"
+			>
+			<TextView
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:textColor="#000000"
+				android:textSize="20dp"
+				android:text="转弯角速度最小阈值：" />
+			<EditText
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:inputType="numberDecimal"
+				android:maxLength="3"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/angularspeed_min"
+				android:text="1" />
+			<ImageButton
+				android:id="@+id/wenhao3"
+				android:scaleType="fitXY"
+				android:layout_marginLeft="15dp"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+				android:background="@drawable/wenhao"
+				/>
+		</LinearLayout>
+	</LinearLayout>
+
+
+
+	<Button
+		android:id="@+id/button_start"
+		android:text="旅途开始"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="50dp"
+		android:textColor="@drawable/selector_button_color_start"
+		android:textSize="22sp"
+		android:layout_width="330dp"
+		android:layout_height="50dp"
+		android:background="@drawable/selector_button_start"
+		/>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#ffffff"
+	>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:orientation="horizontal"
+		android:background="#000000"
+		>
+		<ImageButton
+			android:id="@+id/back2"
+			android:scaleType="fitXY"
+			android:layout_marginLeft="10dp"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_gravity="center"
+			android:background="@drawable/back"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="驾驶事件"
+			android:layout_gravity="center"
+			android:textSize="22sp"
+			android:textColor="#ffffff"/>
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/tv"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:layout_marginTop="20dp"
+		android:textSize="46sp"
+		android:text="直线行驶"
+		android:textColor="#000000"
+		/>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+		android:id="@+id/image"
+		android:src="@drawable/car1"
+		android:layout_gravity="center_horizontal"
+		/>
+
+	<TextView
+		android:id="@+id/alert"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:layout_marginTop="10dp"
+		android:textSize="20sp"
+		android:text="安全！"
+		android:textColor="#990033"
+		/>
+
+    <Button
+		android:id="@+id/button_end"
+		android:text="旅途结束"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="15dp"
+		android:textColor="@drawable/selector_button_color_start"
+		android:textSize="22sp"
+		android:layout_width="330dp"
+		android:layout_height="50dp"
+		android:background="@drawable/selector_button_start"
+    />	
+
+</LinearLayout>
